@@ -1,0 +1,22 @@
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Apellido</th>
+        <th scope="col">Fecha Nacimiento</th>
+        <th scope="col">Aprobado</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr [ngClass]="Alumno.aprobado ? 'table-success' : 'table-danger'" *ngFor="let Alumno of Alumnos">
+        <th scope="row">{{Alumno.id}}</th>
+        <td>{{Alumno.nombre}}</td>
+        <td>{{Alumno.apellido}}</td>
+        <td>{{Alumno.fecha_nacimiento | date: 'medium'}}</td>
+        <td>{{Alumno.aprobado}}</td>
+        <td>
+        </td>
+      </tr>
+    </tbody>
+  </table>
